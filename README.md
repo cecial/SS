@@ -34,3 +34,24 @@ Shadowsocks-libev 版：
 
 ---------------------------------------------------------------------------------
 =================================================================================</br>
+OpenVZ魔改版BBR一键安装脚本 </br>
+https://www.bbaaz.com/thread-91-1-1.html</br>
+
+wget https://makeai.cn/master/ovz-bbr/ovz-bbr-installer.sh && chmod +x ovz-bbr-installer.sh && ./ovz-bbr-installer.sh </br>
+
+端口文件： vi /usr/local/haproxy-lkl/etc/port-rules </br>
+
+在Centos 7 上，有firewalld 需要先关闭（未证实）
+systemctl disable firewalld </br>
+systemctl stop firewalld </br>
+
+firewalld 打开端口，（已证实可行）</br>
+firewall-cmd --permanent --add-port=PORT/tcp </br>
+firewall-cmd --reload </br>
+
+=================================================================================</br>
+查看端口开放，地址可用等：</br>
+http://ping.pe/ 查看地址可用 </br>
+https://www.yougetsignal.com/tools/open-ports/ </br>
+http://tool.chinaz.com/port </br>
+
