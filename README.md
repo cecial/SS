@@ -41,7 +41,7 @@ wget https://makeai.cn/master/ovz-bbr/ovz-bbr-installer.sh && chmod +x ovz-bbr-i
 
 端口文件： vi /usr/local/haproxy-lkl/etc/port-rules </br>
 
-在Centos 7 上，有firewalld 需要先关闭（未证实）
+在Centos 7 上，有firewalld 需要先关闭（未证实）</br>
 systemctl disable firewalld </br>
 systemctl stop firewalld </br>
 
