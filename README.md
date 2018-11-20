@@ -60,3 +60,49 @@ bash 环境 <br>
 export ALL_PROXY=socks5://127.0.0.1:1080
 
 
+NFP v2ray clients
+{
+  "inbound": {
+    "port": 1080, // 监听端口
+    "protocol": "socks", // 入口协议为 SOCKS 5
+    "domainOverride": ["tls","http"],
+    "settings": {
+      "auth": "noauth"  //socks的认证设置，noauth 代表不认证，由于 socks 通常在客户端使用，所以这里不认证
+    }
+  },
+  "outbound": {
+    "protocol": "vmess", // 出口协议
+    "settings": {
+      "vnext": [
+        {
+          "address": "155.94.190.222", // 服务器地址，请修改为你自己的服务器 IP 或域名
+          "port": 19725,  // 服务器端口
+          "users": [
+            {
+              "id": "6ace462f-d47f-43d7-a346-15745a171c70",  // 用户 ID，必须与服务器端配置相同
+              "alterId": 64 // 此处的值也应当与服务器相同
+            }
+          ]
+        }
+      ]
+    },
+	"streamSettings": {
+      "network": "mkcp",
+      "kcpSettings": {
+        "mtu": 1350,
+        "tti": 20,
+        "uplinkCapacity": 100,
+        "downlinkCapacity": 100,
+        "congestion": true,
+        "readBufferSize": 1,
+        "writeBufferSize": 1,
+        "header": {
+          "type": "none"
+        }
+      }
+    }
+  }
+}
+
+
+
