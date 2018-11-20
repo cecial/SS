@@ -60,7 +60,7 @@ bash 环境 <br>
 export ALL_PROXY=socks5://127.0.0.1:1080
 
 
-NFP v2ray clients
+NFP v2ray clients <br>
 {
   "inbound": {
     "port": 1080, // 监听端口
@@ -104,5 +104,78 @@ NFP v2ray clients
   }
 }
 
+<br>
+
+Google Cloud V2ray clients <br>
+// Config file of V2Ray. This file follows standard JSON format, with comments support.
+// Uncomment entries below to satisfy your needs. Also read our manual for more detail at
+// https://www.v2ray.com/
+{
+  "log": {
+    // By default, V2Ray writes access log to stdout.
+    // "access": "/path/to/access/log/file",
+
+    // By default, V2Ray write error log to stdout.
+    // "error": "/path/to/error/log/file",
+
+    // Log level, one of "debug", "info", "warning", "error", "none"
+    "loglevel": "none"
+  },
+  // List of inbound proxy configurations.
+  "inbounds": [{
+    // Port to listen on. You may need root access if the value is less than 1024.
+    "port": 1080,
+
+    // IP address to listen on. Change to "0.0.0.0" to listen on all network interfaces.
+    "listen": "127.0.0.1",
+
+    // Tag of the inbound proxy. May be used for routing.
+    "tag": "socks-inbound",
+
+    // Protocol name of inbound proxy.
+    "protocol": "socks",
+
+	//"domainOverride": ["tls","http"],
+	
+    // Settings of the protocol. Varies based on protocol.
+    "settings": {
+      "auth": "noauth",
+      "udp": true,
+      "ip": "127.0.0.1"
+    }
+  }],
+  // List of outbound proxy configurations.
+  "outbounds": [{
+    // Protocol name of the outbound proxy.
+    "protocol": "vmess",
+
+    // Settings of the protocol. Varies based on protocol.
+    "settings": {
+      "vnext": [
+        {
+          "address": "35.220.246.243", // 服务器地址，请修改为你自己的服务器 IP 或域名
+          "port": 19725,  // 服务器端口
+          "users": [
+            {
+              "id": "716ba90e-4974-439a-87c0-b2f756958c88",  // 用户 ID，必须与服务器端配置相同
+              "alterId": 64 // 此处的值也应当与服务器相同
+            }
+          ]
+        }
+      ]
+	},
+	"streamSettings": {
+      "network": "mkcp",
+      "kcpSettings": {
+        "uplinkCapacity": 100,
+        "downlinkCapacity": 100,
+        "congestion": true,
+        "header": {
+          "type": "none"
+        }
+      }
+    }
+  }]
+}
 
 
