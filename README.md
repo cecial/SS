@@ -55,3 +55,8 @@ http://ping.pe/ 查看地址可用 </br>
 https://www.yougetsignal.com/tools/open-ports/ </br>
 http://tool.chinaz.com/port </br>
 
+linux ternimal 全局代理 <br>
+bash 环境 <br>
+export ALL_PROXY=socks5://127.0.0.1:1080
+
+
