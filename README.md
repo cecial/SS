@@ -194,3 +194,14 @@ chmod +x unixbench.sh
 ./unixbench.sh  </br>
 
 #########################################################################################################################</br>
+
+一键v2ray  
+bash <(curl -s -L https://git.io/v2ray.sh)
+
+开BBR： 
+1. wget --no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh  
+   chmod +x bbr.sh  
+   ./bbr.sh
+2. wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh  
+
+#########################################################################################################################  
