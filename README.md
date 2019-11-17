@@ -180,16 +180,16 @@ Google Cloud V2ray clients <br>
 
 
 #########################################################################################################################</br>
-KVM 安装BBR
-https://www.4spaces.org/speed-up-your-vps-with-bbr-plus/
-wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh
+KVM 安装BBR  
+https://www.4spaces.org/speed-up-your-vps-with-bbr-plus/  
+wget -N --no-check-certificate "https://raw.githubusercontent.com/chiakge/Linux-NetSpeed/master/tcp.sh" && chmod +x tcp.sh && ./tcp.sh  
 
 #########################################################################################################################</br>
 bench mark</br>
-1. wget -qO- bench.sh | bash
-2. wget -qO- git.io/superbench.sh | bash
-3. wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench.sh && bash ZBench.sh
-4. wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh
-chmod +x unixbench.sh
-./unixbench.sh
+1. wget -qO- bench.sh | bash  
+2. wget -qO- git.io/superbench.sh | bash  
+3. wget -N --no-check-certificate https://raw.githubusercontent.com/FunctionClub/ZBench/master/ZBench.sh && bash ZBench.sh  
+4. wget --no-check-certificate https://github.com/teddysun/across/raw/master/unixbench.sh  
+chmod +x unixbench.sh  
+./unixbench.sh  
 #########################################################################################################################</br>
