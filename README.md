@@ -209,4 +209,5 @@ bash <(curl -s -L https://git.io/v2ray.sh)
 #########################################################################################################################  
 Trojan 一键脚本
 
+https://www.atrandys.com/2019/1963.html
 curl -O https://raw.githubusercontent.com/atrandys/trojan/master/trojan_mult.sh && chmod +x trojan_mult.sh && ./trojan_mult.sh
